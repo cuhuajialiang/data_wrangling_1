@@ -65,3 +65,18 @@ pulse_df = read_sas("./data/public_pulse_data.sas7bdat")
 pulse_df
 ```
 
+## Comaprison with base R
+
+what about `read.csv` which is built into R?
+Never use read.csv!
+
+```{r}
+litters_base = read.csv("./data/FAS_litters.csv")
+litters_readr = read_csv("./data/FAS_litters.csv")
+litters_base
+litters_readr
+```
+
+1. Base r version is more difficult to look at
+2. Other stuff... good practices
+
