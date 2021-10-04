@@ -343,3 +343,11 @@ litters_readr
 
 1.  Base r version is more difficult to look at
 2.  Other stuff… good practices
+
+## Exporting data
+
+Export the mlb sub-table
+
+``` r
+write_csv(mlb_df, "./data/mlb_subtable.csv")
+```
