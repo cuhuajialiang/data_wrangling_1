@@ -14,4 +14,76 @@ litters_df = read_csv("./data/FAS_litters.csv")
 litters_df = janitor::clean_names(litters_df)
 ```
 
+## `select`
+
+Choose some columns and not others.
+
+```{r}
+select(litters_df, group, litter_number)
+```
+
+```{r}
+select(litters_df, group, gd0_weight:gd_of_birth)
+```
+
+```{r}
+select(litters_df, -litter_number)
+```
+
+Renaming columns ...
+
+```{r}
+select(litters_df, GROUP = group, LITTer_NUmBer = litter_number)
+```
+
+dedicated function for renaming
+
+```{r}
+rename(litters_df, GROUP = group, LITTer_NUmBer = litter_number)
+```
+
+Helper functions: select helpers
+
+```{r}
+select(litters_df, starts_with("gd"))
+```
+
+```{r}
+# select litter_number: move it to the beginning and kepp everything else
+select(litters_df, litter_number, everything())
+```
+
+```{r}
+# relocate the litters_df column to the beginning
+relocate(litters_df, litter_number)
+```
+
+google: r tidyverse move a column in a data set .....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
